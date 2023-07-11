@@ -1,0 +1,40 @@
+{
+  "name": "rosedb",
+  "description": "astonishing database and easy to use",
+  "version": "1.0.1",
+  "author": {
+    "name": "meslzy",
+    "email": "i@meslzy.com",
+    "url": "https://meslzy.com/"
+  },
+  "repository": "github:rosestack/rosedb",
+  "bugs": "https://github.com/rosestack/rosedb/issues",
+  "homepage": "https://rosestack.meslzy.com/rosedb",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "scripts": {
+    "dev": "rosepack -w",
+    "build": "rosepack",
+    "lint": "eslint source --ext .ts --fix"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "rosestack",
+    "rosedb"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "mit"
+}

@@ -1,0 +1,84 @@
+import { Title, Text, Tabs, Anchor, Code, InfoAlert, Stack, RemoteCode } from "@rosestack/components";
+
+<Stack>
+  <Title order={1}>
+    <Anchor href={"#getting-started"}>Getting started</Anchor>
+  </Title>
+
+  <Title order={2}>
+    <Anchor href={"#installation"}>Installation</Anchor>
+  </Title>
+
+  <Title order={3}>
+    <Anchor href={"#install-rosedb"}>Rosedb</Anchor>
+  </Title>
+
+  <Text>
+    To install Rosedb
+  </Text>
+
+  <Code language={"bash"}>
+    {"npm install rosedb"}
+  </Code>
+
+  <Title order={3}>
+    <Anchor href={"#install-plugins"}>Plugins</Anchor>
+  </Title>
+
+  <InfoAlert title={"Tip"}>
+    Rosedb is just abstract module, you need to install one of plugins to use it, or create your own plugin.
+  </InfoAlert>
+
+  <Tabs value={state.plugin ?? "json"} onTabChange={(tab) => setState({plugin: tab})} variant={"pills"} radius={"md"}>
+    <Tabs.List>
+      <Tabs.Tab value={"json"}>json</Tabs.Tab>
+      <Tabs.Tab value={"cson"}>cson</Tabs.Tab>
+      <Tabs.Tab value={"xml"}>xml</Tabs.Tab>
+      <Tabs.Tab value={"yaml"}>yaml</Tabs.Tab>
+      <Tabs.Tab value={"ini"}>ini</Tabs.Tab>
+    </Tabs.List>
+
+    <Tabs.Panel value={"json"} pt={"md"}>
+      <Code language="bash">
+        {"npm install @rosedb/json"}
+      </Code>
+    </Tabs.Panel>
+
+    <Tabs.Panel value={"cson"} pt={"md"}>
+      <Code language="bash">
+        {"npm install @rosedb/cson"}
+      </Code>
+    </Tabs.Panel>
+
+    <Tabs.Panel value={"xml"} pt={"md"}>
+      <Code language="bash">
+        {"npm install @rosedb/xml"}
+      </Code>
+    </Tabs.Panel>
+
+    <Tabs.Panel value={"yaml"} pt={"md"}>
+      <Code language="bash">
+        {"npm install @rosedb/yaml"}
+      </Code>
+    </Tabs.Panel>
+
+    <Tabs.Panel value={"ini"} pt={"md"}>
+      <Code language="bash">
+        {"npm install @rosedb/ini"}
+      </Code>
+    </Tabs.Panel>
+  </Tabs>
+
+  <Title order={2}>
+    <Anchor href={"#usage"}>Usage</Anchor>
+  </Title>
+
+  <RemoteCode
+    file={file}
+    repo={repo}
+    branch={branch}
+    fullname={repo.full_name}
+    url={`assets/snippet/usage/${state.plugin ?? "json"}.ts`}
+    language={"typescript"}
+  />
+</Stack>

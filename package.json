@@ -1,0 +1,30 @@
+{
+  "name": "rosedb",
+  "type": "module",
+  "scripts": {
+    "dev": "roserepo run dev",
+    "build": "roserepo run build",
+    "test": "roserepo run test",
+    "lint": "roserepo run lint",
+    "publish": "roserepo publish",
+    "chanegset": "roserepo changeset",
+    "upgrade": "roserepo upgrade"
+  },
+  "dependencies": {
+    "@rosestack/components": "^1.0.2"
+  },
+  "devDependencies": {
+    "@meslzy/eslint-config": "^0.5.3",
+    "@meslzy/tsconfig": "^0.2.1",
+    "eslint": "^8.44.0",
+    "rosepack": "^1.0.2",
+    "roserepo": "^1.0.6",
+    "typescript": "^5.1.6",
+    "vitest": "^0.33.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "plugins/*"
+  ],
+  "private": true
+}

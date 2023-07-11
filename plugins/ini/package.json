@@ -1,0 +1,51 @@
+{
+  "name": "@rosedb/ini",
+  "description": "ini plugin for rosedb",
+  "version": "1.0.0",
+  "author": {
+    "name": "meslzy",
+    "email": "i@meslzy.com",
+    "url": "https://meslzy.com/"
+  },
+  "repository": "github:rosestack/rosedb",
+  "bugs": "https://github.com/rosestack/rosedb/issues",
+  "homepage": "https://rosestack.meslzy.com/rosedb/plugins/ini",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "scripts": {
+    "dev": "rosepack -w",
+    "build": "rosepack",
+    "lint": "eslint source --ext .ts --fix",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "ini": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/ini": "^1.3.31"
+  },
+  "peerDependencies": {
+    "rosedb": "^1.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "rosestack",
+    "rosedb",
+    "ini"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "mit"
+}
